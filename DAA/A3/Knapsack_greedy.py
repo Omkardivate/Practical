@@ -18,10 +18,7 @@ def knapSack(W, wt, val, n):
 	# (1) nth item included
 	# (2) not included
 	else:
-		return max(
-			val[n-1] + knapSack(
-				W-wt[n-1], wt, val, n-1),
-			knapSack(W, wt, val, n-1))
+		return max(val[n-1] + knapSack(W-wt[n-1], wt, val, n-1),knapSack(W, wt, val, n-1))
 
 # end of function knapSack
 
